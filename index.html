@@ -8,7 +8,44 @@
 <body>
     <script>
         console.log("Hello, world!");
+        //let x = prompt("Enter Number");
+        //console.log("This is " + x);
 
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+        //Variables for humanScore and computerScore init at 0
+
+
+        //Function that randomly returns "rock", "paper", "scissors"
+        function getComputerChoice() {
+            let choice = getRandomInt(3);
+            switch (choice) {
+                case 1: 
+                    return ("rock");
+                    break;
+                case 2:
+                    return ("paper");
+                    break;
+                default:
+                    return ("scissors")
+            }
+        }
+
+
+        //Function that takes user choice and returns it
+
+
+        //Function that plays a single round
+        //Takes the human and computer player choices as arguments 
+        //Play a single round 
+        //Increment the round winner score 
+        //Log a winner announcement 
+
+
+        //Function to play game for 5 rounds
+        //Declare winner at end 
 
 
 
