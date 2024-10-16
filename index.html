@@ -19,7 +19,6 @@
         let humanScore = 0;
         let computerScore = 0;
 
-
         //Function that randomly returns "rock", "paper", "scissors"
         function getComputerChoice() {
             let choice = getRandomInt(3);
@@ -106,14 +105,28 @@
             }
         }
 
-        playRound(getHumanChoice(), getComputerChoice());
-
-
         //Function to play game for 5 rounds
         //Declare winner at end 
+        function playGame() {
+            //Play 5 games
+            playRound(getHumanChoice(), getComputerChoice());
+            playRound(getHumanChoice(), getComputerChoice());
+            playRound(getHumanChoice(), getComputerChoice());
+            playRound(getHumanChoice(), getComputerChoice());
+            playRound(getHumanChoice(), getComputerChoice());
+            //Compare scores
+            if (humanScore > computerScore) {
+                console.log("Player Wins!!! " + humanScore + " - " + computerScore);
+            } else {
+                console.log("Computer Wins!!! " + humanScore + " - " + computerScore);
+            }
+            //Reset game
+            humanScore = 0;
+            computerScore = 0;
+        }
 
-
-
+        // HAVE FUN!! 
+        playGame();
 
     </script>
 </body>
