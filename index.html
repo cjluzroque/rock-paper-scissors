@@ -23,18 +23,28 @@
             let choice = getRandomInt(3);
             switch (choice) {
                 case 1: 
+                    console.log("Comp chose rock");
                     return ("rock");
                     break;
                 case 2:
+                    console.log("Comp chose paper");
                     return ("paper");
                     break;
                 default:
+                    console.log("Comp chose scissors");
                     return ("scissors")
             }
         }
 
 
         //Function that takes user choice and returns it
+        function getHumanChoice() {
+            let choice = prompt("Rock, Paper, or Scissors?");
+            console.log("You chose " + choice);
+            return(choice);
+        }
+
+        getHumanChoice();
 
 
         //Function that plays a single round
