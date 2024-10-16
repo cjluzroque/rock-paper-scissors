@@ -117,8 +117,10 @@
             //Compare scores
             if (humanScore > computerScore) {
                 console.log("Player Wins!!! " + humanScore + " - " + computerScore);
-            } else {
+            } else if (humanScore > computerScore) {
                 console.log("Computer Wins!!! " + humanScore + " - " + computerScore);
+            } else {
+                console.log("It's a tie!!! " + humanScore + " - " + computerScore);
             }
             //Reset game
             humanScore = 0;
