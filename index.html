@@ -49,9 +49,57 @@
 
         //Function that plays a single round
         //Takes the human and computer player choices as arguments 
-        //Play a single round 
-        //Increment the round winner score 
-        //Log a winner announcement 
+        function playRound(humanChoice, computerChoice) {
+            //Play a single round 
+            if (humanChoice == computerChoice) {
+                console.log("DRAW!");
+                return;
+            } else if (humanChoice == "rock") {
+                if (computerChoice == "paper") {
+                    //Log a winner announcement 
+                    console.log("COMP WINS!");
+                    //Increment the round winner score 
+                    computerScore++; 
+                    return;
+                } else if (computerChoice == "scissors") {
+                    //Log a winner announcement 
+                    console.log("PLAYER WINS!");
+                    //Increment the round winner score 
+                    humanScore++; 
+                    return;
+                }
+            } else if (humanChoice == "paper") {
+                if (computerChoice == "scissors") {
+                    //Log a winner announcement 
+                    console.log("COMP WINS!");
+                    //Increment the round winner score 
+                    computerScore++; 
+                    return;
+                } else if (computerChoice == "rock") {
+                    //Log a winner announcement 
+                    console.log("PLAYER WINS!");
+                    //Increment the round winner score 
+                    humanScore++; 
+                    return;
+                }
+            } else if (humanChoice == "scissors") {
+                if (computerChoice == "rock") {
+                    //Log a winner announcement 
+                    console.log("COMP WINS!");
+                    //Increment the round winner score 
+                    computerScore++; 
+                    return;
+                } else if (computerChoice == "paper") {
+                    //Log a winner announcement 
+                    console.log("PLAYER WINS!");
+                    //Increment the round winner score 
+                    humanScore++; 
+                    return;
+                }
+            }
+        }
+
+        playRound(getHumanChoice(), getComputerChoice());
 
 
         //Function to play game for 5 rounds
