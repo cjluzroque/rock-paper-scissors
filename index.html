@@ -42,8 +42,14 @@
         //Function that takes user choice and returns it
         function getHumanChoice() {
             let choice = prompt("Rock, Paper, or Scissors?");
-            console.log("You chose " + choice);
-            return(choice);
+            //Force a proper choice 
+            if (choice.toLowerCase() == "rock" || choice.toLowerCase() == "scissors" || choice.toLowerCase() == "paper") {
+                console.log("You chose " + choice.toLowerCase());
+                return(choice.toLowerCase());
+            }
+            else {
+                return(getHumanChoice());
+            }
         }
 
 
